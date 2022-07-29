@@ -89,7 +89,7 @@ while True:
                     break
             # 5 - SALIR
             elif choise_admin == 5:
-                print("Fin del juego")
+                print("Hasta la proxima administrador")
                 break
             else:
                 print("ojo modo incorrecttttt")
