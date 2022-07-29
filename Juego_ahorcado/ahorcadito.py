@@ -13,83 +13,84 @@ print("-------BIENVENIDO AL AHORCADITO-------")
 while True:
     juego = input(" J -- JUGAR\n A -- ADMINISTRAR\n E -- SALIR\n ")
     
-    
     #EN CASO DE A - ADMINISTRAR
     if juego.lower() == "a":
         print("-------BIENVENIDO ADMINISTRADOR-------")
-        choise_admin = input(" 1 -- Modificar VIDAS\n 2 -- Modificar PUNTOS\n 3 -- Modificar BONUS\n 4 -- Modificar PALABRAS\n 5 -- SALIR\n")
-        
-        # 1 - MODIFICAR VIDAS
-        if choise_admin == 1:
-            print("Seleccione el modo al que desea cambiar las VIDAS")
-            modo = input(" D -- modo DIFICIL\n M -- modo MEDIO \n F -- modo FACIL: ")
+        #choise_admin = input(" 1 -- Modificar VIDAS\n 2 -- Modificar PUNTOS\n 3 -- Modificar BONUS\n 4 -- Modificar PALABRAS\n 5 -- SALIR\n")
+        while True:
+            choise_admin = input(" 1 -- Modificar VIDAS\n 2 -- Modificar PUNTOS\n 3 -- Modificar BONUS\n 4 -- Modificar PALABRAS\n 5 -- SALIR\n")
+            # 1 - MODIFICAR VIDAS
+            if choise_admin == 1:  
+                print("Seleccione el modo al que desea cambiar las VIDAS")
+                cat_seleccionada = input(" D -- modo DIFICIL\n M -- modo MEDIO \n F -- modo FACIL: ")
             
-            if modo.lower() == "d":
-                cambio_vida=input("¿Cuantas vidas desea poner en DIFICIL?")
-                VIDASD=cambio_vida
-                break
-            if modo.lower() == "m":
-                cambio_vida=input("¿Cuantas vidas desea poner en MEDIO?")
-                VIDASM=cambio_vida
-                break
-            if modo.lower() == "f":
-                cambio_vida=input("¿Cuantas vidas desea poner en FACIL?")
-                VIDASF=cambio_vida
-                break
+                if cat_seleccionada.lower() == "d":
+                        cambio_vida=input("¿Cuantas vidas desea poner en DIFICIL?")
+                        VIDASD=cambio_vida
+                        break
+                elif cat_seleccionada.lower() == "m":
+                        cambio_vida=input("¿Cuantas vidas desea poner en MEDIO?")
+                        VIDASM=cambio_vida
+                        break
+                elif cat_seleccionada.lower() == "f":
+                        cambio_vida=input("¿Cuantas vidas desea poner en FACIL?")
+                        VIDASF=cambio_vida
+                        break
+                else:
+                 print("Por favor no sea manco seleccione un modo correcto")
+                 cat_seleccionada = input(
+                    "Ingrese D para el modo DIFICIL, M para el modo MEDIO, F para el modo FACIL: ")
 
-        # 2 - MODIFICAR PUNTOS
-        if choise_admin == 2:
-            print("Seleccione el modo al que desea cambiar las PUNTOS")
-            modo = input(" D -- modo DIFICIL\n M -- modo MEDIO \n F -- modo FACIL: ")
-            if modo.lower() == "d":
-                print("")
-                break
-            if modo.lower() == "m":
-                print("")
-                break
-            if modo.lower() == "f":
-                print("")
-                break
+            # 2 - MODIFICAR PUNTOS
+            elif choise_admin == 2:
+                print("Seleccione el modo al que desea cambiar las PUNTOS")
+                cat_seleccionada = input(" D -- modo DIFICIL\n M -- modo MEDIO \n F -- modo FACIL: ")
+                if cat_seleccionada.lower() == "d":
+                    print("")
+                    break
+                elif cat_seleccionada.lower() == "m":
+                    print("")
+                    break
+                elif cat_seleccionada.lower() == "f":
+                    print("")
+                    break
 
-        # 3 - MODIFICAR BONUS
-        if choise_admin == 3:
-            print("Seleccione el modo al que desea cambiar las BONUS")
-            modo = input(" D -- modo DIFICIL\n M -- modo MEDIO \n F -- modo FACIL: ")
-            if modo.lower() == "d":
-                print("")
-                break
-            if modo.lower() == "m":
-                print("")
-                break
-            if modo.lower() == "f":
-                print("")
-                break
+            # 3 - MODIFICAR BONUS
+            elif choise_admin == 3:
+                print("Seleccione el modo al que desea cambiar las BONUS")
+                cat_seleccionada = input(" D -- modo DIFICIL\n M -- modo MEDIO \n F -- modo FACIL: ")
+                if cat_seleccionada.lower() == "d":
+                    print("")
+                    break
+                if cat_seleccionada.lower() == "m":
+                    print("")
+                    break
+                if cat_seleccionada.lower() == "f":
+                    print("")
+                    break
 
-        # 4 - MODIFICAR PALABRAS
-        if choise_admin == 4:
-            print("Seleccione el modo al que desea cambiar las PALABRAS")
-            if modo.lower() == "d":
-                print("1 -- CAMBIAR PALABRA EN DIFICIL \n 2 -- PALABRAS DEFAULT") 
+            # 4 - MODIFICAR PALABRAS
+            elif choise_admin == 4:
+                print("Seleccione el modo al que desea cambiar las PALABRAS")
+                if cat_seleccionada.lower() == "d":
+                    print("1 -- CAMBIAR PALABRA EN DIFICIL \n 2 -- PALABRAS DEFAULT") 
+                    break
+                elif cat_seleccionada.lower() == "m":
+                    print("CAMBIAR PALABRA EN MEDIO \n 2 -- PALABRAS DEFAULT") 
+                    break
+                elif cat_seleccionada.lower() == "f":
+                    print("CAMBIAR PALABRA EN FACIL \n 2 -- PALABRAS DEFAULT") 
+                    break
+            # 5 - SALIR
+            elif choise_admin == 5:
+                print("Fin del juego")
                 break
-            if modo.lower() == "m":
-                print("CAMBIAR PALABRA EN MEDIO \n 2 -- PALABRAS DEFAULT") 
-                break
-            if modo.lower() == "f":
-                print("CAMBIAR PALABRA EN FACIL \n 2 -- PALABRAS DEFAULT") 
-                break
-        # 5 - SALIR
-        elif choise_admin == 5:
-            print("Fin del juego")
-            break
-            
-    else:
-        print("INGRESE OPCION VALIDA")
-        juego = input(" J -- JUGAR\n A -- ADMINISTRAR\n E -- SALIR\n ")
-
-
+            else:
+                print("ojo modo incorrecttttt")
+                exit()
 
     #EN CASO DE J - JUEGO
-    if juego.lower() == "j":
+    elif juego.lower() == "j":
         print("-------AHORCADITO-------\n")
         time.sleep(1)
 
@@ -198,7 +199,7 @@ while True:
 
                 print("La palabra secreta es: " + palabra_secreta)
                 break
-
+    #EN CASO DE SALIR
     elif juego.lower() == "e":
         print("Fin del juego")
         break
